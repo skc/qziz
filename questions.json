@@ -26,8 +26,22 @@
       "1492"
     ],
     "correctAnswer": "1947",
-    "tags": null,
+    "tags": ["History"],
     "publishedAt": "2023-04-14T12:37:56.794526+03:00",
+    "publishedBy": "057724817"
+  },
+  {
+    "id": "cgshtt3kru73flm9vd60",
+    "text": "What country has the most nobel price winners ?",
+    "answers": [
+      "France",
+      "United States",
+      "Germany",
+      "United Kingdom"
+    ],
+    "correctAnswer": "United States",
+    "tags": ["Nobel", "General"],
+    "publishedAt": "2023-04-15T11:50:56.794526+03:00",
     "publishedBy": "057724817"
   }
 ]

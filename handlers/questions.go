@@ -5,6 +5,7 @@ import (
 	"github.com/rs/xid"
 	"net/http"
 	"qziz/models"
+	"strings"
 	"time"
 )
 
@@ -80,4 +81,19 @@ func (h *QuestionsHandler) DeleteQuestion(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"message": "Question has been deleted",
 	})
+}
+
+func (h *QuestionsHandler) Search(c *gin.Context) {
+	tag := c.Query("tag")
+	questions := make([]models.Question, 0)
+
+	for _, q := range h.questions {
+		for _, t := range q.Tags {
+			if strings.EqualFold(t, tag) {
+				questions = append(questions, q)
+				break
+			}
+		}
+	}
+	c.JSON(http.StatusOK, questions)
 }
