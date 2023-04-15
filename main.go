@@ -33,5 +33,6 @@ func main() {
 	router.GET("/questions", questionsHandler.ListQuestions)
 	router.PUT("/questions/:id", questionsHandler.UpdateQuestion)
 	router.DELETE("/questions/:id", questionsHandler.DeleteQuestion)
+	router.GET("/questions/search", questionsHandler.Search)
 	router.Run()
 }
